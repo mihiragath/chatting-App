@@ -1,0 +1,154 @@
+/* General body styling */
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(109, 39, 239), rgb(255, 204, 0));
+    color: #fff;
+}
+
+/* Navigation bar with logo */
+nav {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid #fff;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(360deg);
+}
+
+/* Chat container styling */
+.container {
+    max-width: 955px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    margin: auto;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+/* Chat message bubbles */
+.message {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: fit-content;
+    padding: 12px 18px;
+    margin: 17px 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Add a little arrow effect to messages */
+.message:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.left {
+    float: left;
+    clear: both;
+}
+
+.left:after {
+    left: -10px;
+    border-width: 6px 10px 6px 0;
+    border-color: transparent rgba(255, 255, 255, 0.5) transparent transparent;
+}
+
+.right {
+    float: right;
+    clear: both;
+    text-align: right;
+}
+
+.right:after {
+    right: -10px;
+    border-width: 6px 0 6px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+}
+
+/* Chat input area styling */
+#send-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 985px;
+}
+
+#messageInp {
+    width: 80%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    height: 40px;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#messageInp:focus {
+    border-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    cursor: pointer;
+    margin-left: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    transform: scale(1.1);
+}
+
+/* Scrollbar styling for the chat container */
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
